@@ -7,6 +7,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 import { EffectCoverflow, Pagination } from "swiper";
+import FormSection from "../components/FormSection";
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
       <img
         src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss.com/master/src/img/beams/hero-dark.png"
         alt=""
-        class="absolute top-1/2 left-1/2 max-w-full max-h-auto -translate-x-1/2 -translate-y-1/2"
+        class="absolute object-cover top-1/2 left-1/2 max-w-full max-h-auto -translate-x-1/2 -translate-y-1/2"
         width=""
       />
 
@@ -46,7 +47,7 @@ const Home = () => {
 
             <div className="flex gap-4 justify-center">
               <a
-                className="rounded-full bg-gradient-to-r from-rose-700 to-pink-600 py-4 px-6 text-sm font-semibold text-slate-900 hover:bg-sky-200 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300/50 active:bg-sky-500"
+                className="rounded-full font-bold text-white bg-gradient-to-r from-rose-700 to-pink-600 py-4 px-6 text-sm hover:bg-sky-200 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300/50 active:bg-sky-500"
                 href="/"
               >
                 Get Started
@@ -101,6 +102,11 @@ const Home = () => {
                 </div>
               </SwiperSlide>
             </Swiper>
+          </div>
+        </div>
+        <div className="w-full p-4 mt-5 bg-slate-900">
+          <div className="relative container m-auto px-6 md:px-12 lg:px-6">
+            <FormSection />
           </div>
         </div>
       </div>
