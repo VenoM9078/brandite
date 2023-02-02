@@ -25,7 +25,7 @@ const Navbar = () => {
                     style={{ fontFamily: "Unbounded" }}
                     className="text-2xl font-bold text-sky-400 "
                   >
-                    GitOver
+                    Brandite
                   </span>
                 </a>
 
