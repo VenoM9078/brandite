@@ -10,6 +10,11 @@ router.post("/getBrands", async (req, res) => {
   let keywords = req.body.keywords;
   let style = req.body.style;
 
+  const OPENAI_KEY = process.env.OPENAI_KEY;
+  const apiKey = OPENAI_KEY;
+
+  console.log(apiKey);
+
   if (style == "Auto") {
     style =
       "Auto - can have Alternate Spelling, Brandable Names, Non-English Words, Two Words";
@@ -20,9 +25,6 @@ router.post("/getBrands", async (req, res) => {
   } else if (style == "Non-English") {
     style = "can have Non English Words - like Toyota or Audi";
   }
-
-  const OPENAI_KEY = process.env.OPENAI_KEY;
-  const apiKey = OPENAI_KEY;
 
   axios({
     method: "post",
@@ -62,7 +64,7 @@ router.post("/getBrands", async (req, res) => {
       res.json(obj);
     })
     .catch(function (error) {
-      console.error(error);
+      console.error(error.response);
     });
 });
 
