@@ -33,10 +33,10 @@ const Home = () => {
 
       <div className="relative">
         <div className="relative container m-auto px-6 md:px-12 lg:px-6">
-          <div className="mb-12 pt-40 space-y-8 md:mb-20 md:pt-40 lg:w-9/12 lg:mx-auto">
+          <div className="mb-12 pt-40 md:mb-20 md:pt-40 lg:w-9/12 lg:mx-auto">
             <h1
               style={{ fontFamily: "Unbounded" }}
-              className="text-slate-300 text-center text-5xl w-full font-bold sm:text-4xl md:text-5xl"
+              className="text-slate-300 text-center pb-5 text-5xl w-full font-bold sm:text-4xl md:text-5xl"
             >
               Label Your{" "}
               <span className="inline bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-indigo-900 via-indigo-400 to-indigo-900 bg-clip-text font-display text-5xl tracking-tight text-transparent">
@@ -49,7 +49,7 @@ const Home = () => {
             </h1>
 
             <ModalForm />
-            <div className="mt-10">
+            <div className="mt-10 pt-5">
               <Swiper
                 effect={"coverflow"}
                 grabCursor={true}
@@ -72,7 +72,7 @@ const Home = () => {
                     <div className="absolute -bottom-px left-11 right-20 h-px bg-gradient-to-r from-blue-400/0 via-blue-400 to-blue-400/0" />
                     <div className="">
                       <img
-                        src="https://i.imgur.com/s1xyk4Z.png"
+                        src="https://i.imgur.com/hwr0dHR.png"
                         alt="Your image description"
                         className="img-responsive rounded-2xl"
                       />
@@ -85,7 +85,20 @@ const Home = () => {
                     <div className="absolute -bottom-px left-11 right-20 h-px bg-gradient-to-r from-blue-400/0 via-blue-400 to-blue-400/0" />
                     <div className="">
                       <img
-                        src="https://i.imgur.com/s1xyk4Z.png"
+                        src="https://i.imgur.com/2B46KHA.png"
+                        alt="Your image description"
+                        className="img-responsive rounded-2xl"
+                      />
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="relative rounded-2xl bg-[#0A101F]/80 ring-1 ring-white/10 backdrop-blur">
+                    <div className="absolute -top-px left-20 right-11 h-px bg-gradient-to-r from-sky-300/0 via-sky-300/70 to-sky-300/0" />
+                    <div className="absolute -bottom-px left-11 right-20 h-px bg-gradient-to-r from-blue-400/0 via-blue-400 to-blue-400/0" />
+                    <div className="">
+                      <img
+                        src="https://i.imgur.com/oVUIZLf.png"
                         alt="Your image description"
                         className="img-responsive rounded-2xl"
                       />

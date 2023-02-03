@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -17,8 +18,8 @@ const Navbar = () => {
           <div className="xl:container m-auto px-6 md:px-12">
             <div className="flex flex-wrap items-center justify-between gap-6 md:py-1 md:gap-0">
               <div className="w-full flex justify-between lg:w-auto">
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   aria-label="logo"
                   className="flex space-x-2 items-center"
                 >
@@ -28,7 +29,7 @@ const Navbar = () => {
                   >
                     Brandite
                   </span>
-                </a>
+                </Link>
 
                 <label
                   htmlFor="hbr"
@@ -44,36 +45,21 @@ const Navbar = () => {
                   />
                 </label>
               </div>
+              {/* <iframe
+                class="github-btn"
+                src="http://ghbtns.com/github-btn.html?user=VenoM9078&amp;repo=brandite&amp;type=watch&amp;count=true"
+                width="100"
+                height="20"
+                title="Star on GitHub"
+              ></iframe> */}
+
               <div className="navmenu hidden w-full flex-wrap justify-end items-center mb-16 space-y-8 p-6 rounded-3xl shadow-2xl shadow-gray-300/20 bg-white dark:bg-gray-800 lg:space-y-0 lg:p-0 lg:m-0 lg:flex md:flex-nowrap lg:bg-transparent lg:w-7/12 lg:shadow-none dark:shadow-none dark:border-gray-700 lg:border-0">
-                <div className="text-gray-600 dark:text-gray-300 lg:pr-4">
-                  {/* <ul className="space-y-6 tracking-wide font-medium text-base lg:text-sm lg:flex lg:space-y-0">
-                    <li>
-                      <a
-                        href="#"
-                        className="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight"
-                      >
-                        <span>Home</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight"
-                      >
-                        <span>Portfolio</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight"
-                      >
-                        <span>Services</span>
-                      </a>
-                    </li>
-                  </ul> */}
-                </div>
-                <a class="group" aria-label="GitHub" href="https://github.com">
+                <div className="text-gray-600 dark:text-gray-300 lg:pr-4"></div>
+                <a
+                  class="group"
+                  aria-label="GitHub"
+                  href="https://github.com/VenoM9078/brandite"
+                >
                   <svg
                     aria-hidden="true"
                     viewBox="0 0 16 16"
