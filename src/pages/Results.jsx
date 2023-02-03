@@ -200,7 +200,7 @@ const Results = () => {
                   <span>{keywords}</span>
                 </div>
               </button>
-              <button
+              {/* <button
                 onClick={formHandler}
                 class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-md font-medium text-white rounded-full group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-1 focus:outline-none focus:ring-pink-800 dark:focus:ring-pink-800"
               >
@@ -228,7 +228,7 @@ const Results = () => {
                     />
                   </svg>
                 </div>
-              </button>
+              </button> */}
               <button
                 onClick={handleRandomize}
                 class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-md font-medium text-white rounded-full group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-1 focus:outline-none focus:ring-pink-800 dark:focus:ring-pink-800"
