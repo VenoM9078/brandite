@@ -31,7 +31,7 @@ const Navbar = () => {
                   </span>
                 </Link>
 
-                <label
+                {/* <label
                   htmlFor="hbr"
                   className="peer-checked:hamburger block relative z-20 p-6 -mr-6 cursor-pointer lg:hidden"
                 >
@@ -43,7 +43,7 @@ const Navbar = () => {
                     aria-hidden="true"
                     className="m-auto mt-2 h-0.5 w-6 rounded bg-gray-900 dark:bg-gray-300 transition duration-300"
                   />
-                </label>
+                </label> */}
               </div>
               {/* <iframe
                 class="github-btn"
