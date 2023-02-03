@@ -38,4 +38,4 @@ Simple.
   `nodemon index.js`
 
 ## Support
-If you need help with anything related to the source code, feel free to reach out to our support team at [support@brandite.com](mailto:roushan.venom1@gmail.com).
+If you need help with anything related to the source code, feel free to reach out to our support team at [roushan.venom1@gmail.com](mailto:roushan.venom1@gmail.com).
