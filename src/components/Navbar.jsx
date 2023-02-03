@@ -11,6 +11,7 @@ const Navbar = () => {
           className="hbr peer"
           hidden
           aria-hidden="true"
+          style={{ opacity: "0" }}
         />
         <nav className="relative z-20 w-full">
           <div className="xl:container m-auto px-6 md:px-12">

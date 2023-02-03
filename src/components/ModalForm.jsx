@@ -42,14 +42,12 @@ const ModalForm = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.keywords);
-        console.log(data.style);
+        console.log(data);
+        navigate("/results", { state: { data } });
       })
       .catch((error) => {
         console.error(error);
       });
-
-    // navigate(`/results/${keywords}/${style}`);
   };
 
   return (
