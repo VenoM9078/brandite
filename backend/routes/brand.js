@@ -34,12 +34,12 @@ router.post("/getBrands", async (req, res) => {
       Authorization: `Bearer ${apiKey}`,
     },
     data: {
-      model: "text-davinci-001",
+      model: "text-curie-001",
       prompt: `Give me a list of 20 names based on the keywords "${keywords}", each name MUST be LESS than 13 characters long, unique, creative, catchy and attractive. Priority is SINGLE WORDS. Do NOT include any numeric digits in any name. Style of the name MUST be "${style}". These names MUST be usable as business names. So make them attractive without making them unusable or weird. Single word only. No numbering before the text. Keep each name short.`,
-      temperature: 1,
-      max_tokens: 124,
-      top_p: 1,
-      frequency_penalty: 1,
+      temperature: 0,
+      max_tokens: 70,
+      top_p: 0.5,
+      frequency_penalty: 0.5,
       presence_penalty: 0,
     },
   })
