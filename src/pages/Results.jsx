@@ -153,8 +153,8 @@ const Results = () => {
         <div className="relative container m-auto px-6 md:px-12 lg:px-6">
           <div className="mb-12 space-y-8 md:mb-20 pt-16 w-full lg:mx-auto">
             <div className="flex justify-center items-center">
-              <Link
-                to="/"
+              <a
+                href="/"
                 class="text-blue-700 mr-2 align-baseline self-baseline	 border relative inline-flex items-center justify-center border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800"
               >
                 <svg
@@ -173,7 +173,7 @@ const Results = () => {
                 </svg>
 
                 <span class="sr-only">Icon description</span>
-              </Link>
+              </a>
               <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-md font-medium text-white rounded-full group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-1 focus:outline-none focus:ring-pink-800 dark:focus:ring-pink-800">
                 <div
                   style={{

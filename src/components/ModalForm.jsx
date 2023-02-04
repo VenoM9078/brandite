@@ -7,16 +7,22 @@ const ModalForm = () => {
   const navigate = useNavigate();
   const [pressable, setPressable] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  const [isValid, setIsValid] = useState(false);
 
   useEffect(() => {
-    return () => {
-      if (keywords.length > 2) {
-        setPressable(true);
-      } else {
-        setPressable(false);
-      }
-    };
-  }, [keywords]);
+    setIsMounted(true);
+    return () => setIsMounted(false);
+  }, []);
+
+  useEffect(() => {
+    if (isMounted && keywords.length > 2) {
+      setPressable(true);
+    } else {
+      setPressable(false);
+    }
+  }, [isMounted, keywords]);
 
   const keywordHandler = (e) => {
     setKeywords(e.target.value);
@@ -77,7 +83,7 @@ const ModalForm = () => {
             <button
               data-modal-target="defaultModal"
               data-modal-toggle="defaultModal"
-              class="rounded-full font-bold text-white bg-gradient-to-r from-rose-700 to-pink-600 py-4 px-6 text-md hover:bg-sky-200 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300/50 active:bg-sky-500"
+              className="rounded-full font-bold text-white bg-gradient-to-r from-rose-700 to-pink-600 py-4 px-6 text-md hover:bg-sky-200 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300/50 active:bg-sky-500"
               type="button"
               disabled
             >
@@ -87,7 +93,7 @@ const ModalForm = () => {
             <button
               data-modal-target="defaultModal"
               data-modal-toggle="defaultModal"
-              class="rounded-full font-bold text-white bg-gradient-to-r from-rose-700 to-pink-600 py-4 px-6 text-md hover:bg-sky-200 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300/50 active:bg-sky-500"
+              className="rounded-full font-bold text-white bg-gradient-to-r from-rose-700 to-pink-600 py-4 px-6 text-md hover:bg-sky-200 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300/50 active:bg-sky-500"
               type="button"
             >
               Generate 🚀
@@ -305,7 +311,7 @@ const ModalForm = () => {
           <div role="status">
             <svg
               aria-hidden="true"
-              class="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+              className="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
               viewBox="0 0 100 101"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -319,7 +325,7 @@ const ModalForm = () => {
                 fill="currentFill"
               />
             </svg>
-            <span class="sr-only">Loading...</span>
+            <span className="sr-only">Loading...</span>
           </div>
         </div>
       )}
