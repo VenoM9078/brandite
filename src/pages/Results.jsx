@@ -90,7 +90,7 @@ const Results = () => {
       style: style,
     };
 
-    fetch("http://localhost:5000/api/brands/getBrands", {
+    fetch("https://brandite-api.vercel.app/api/brands/getBrands", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
