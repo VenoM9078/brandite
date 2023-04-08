@@ -13,8 +13,6 @@ router.post("/getBrands", async (req, res) => {
   const OPENAI_KEY = process.env.OPENAI_KEY;
   const apiKey = OPENAI_KEY;
 
-  console.log(apiKey);
-
   if (style == "Auto") {
     style =
       "Auto - can have Alternate Spelling, Brandable Names, Non-English Words, Two Words";
@@ -34,32 +32,22 @@ router.post("/getBrands", async (req, res) => {
       Authorization: `Bearer ${apiKey}`,
     },
     data: {
-      model: "text-curie-001",
-      prompt: `Give me a list of 20 names based on the keywords "${keywords}", each name MUST be LESS than 13 characters long, unique, creative, catchy and attractive. Priority is SINGLE WORDS. Do NOT include any numeric digits in any name. Style of the name MUST be "${style}". These names MUST be usable as business names. So make them attractive without making them unusable or weird. Single word only. No numbering before the text. Keep each name short.`,
-      temperature: 0,
-      max_tokens: 70,
-      top_p: 0.5,
+      model: "text-davinci-003",
+      prompt: `Provide a list of 40 single-word names based on the keywords "${keywords}", each name MUST be LESS than 10 characters long, unique, creative, catchy, and attractive. Do NOT include any numeric digits or the string "xyz" in any name. The style of the name MUST be "${style}". These names MUST be usable as business names. Format the response as: Name1|Name2|Name3|...`,
+      temperature: 1,
+      max_tokens: 256,
+      top_p: 1,
       frequency_penalty: 0.5,
-      presence_penalty: 0,
+      presence_penalty: 0.5,
     },
   })
     .then(function (response) {
       console.log(response.data.choices[0]);
-      const list = response.data.choices[0].text.split("\n");
-      const objects = list.map((word) => {
-        let wordParts = word.split(".");
-        if (wordParts.length >= 2) {
-          let cleanWord = wordParts[1].trim();
-          if (cleanWord.length <= 13 && !/\d/.test(cleanWord)) {
-            return { name: cleanWord };
-          }
-        }
-      });
-      const filteredList = objects.filter((obj) => obj !== undefined);
+      const responseText = response.data.choices[0].text;
+      const nameArray = responseText.split("|");
+      const filteredList = nameArray.map((name) => ({ name }));
 
       let obj = [filteredList, keywords, style];
-
-      // res.json(filteredList);
 
       res.json(obj);
     })

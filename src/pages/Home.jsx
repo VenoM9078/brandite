@@ -1,14 +1,9 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-import { Swiper, SwiperSlide } from "swiper/react";
 
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-
-import { EffectCoverflow, Pagination } from "swiper";
 import FormSection from "../components/FormSection";
 import ModalForm from "../components/ModalForm";
+import "./Background.css";
 
 const Home = () => {
   const [pressable, setPressable] = useState(false);
@@ -16,97 +11,60 @@ const Home = () => {
   return (
     <>
       <Navbar />
-
-      <img
-        src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss.com/master/src/img/beams/hero-dark.png"
-        alt=""
-        className="absolute object-cover top-1/2 left-1/2 max-w-full max-h-auto -translate-x-1/2 -translate-y-1/2"
-        width=""
-      />
-
-      <div className="absolute inset-0 bg-[url(https://play.tailwindcss.com/img/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+      <div
+        style={{ width: "600px", top: "-180px" }}
+        class="absolute right-[100px] z-10 h-[150px] w-[400px] rotate-[0deg] transform rounded-full bg-purple-600 blur-[150px]"
+      ></div>
+      <div class="absolute dotted-background h-full top-0 left-0 right-0 z-0">
+        <div class="absolute left-0 right-0 bottom-0 h-[300px]"></div>
+      </div>{" "}
       <img
         src="https://www.useblackbox.io/style/images/bg-shape-006-p-2000.png"
         alt=""
         className="absolute top-0 left-0 w-full h-full object-cover"
       />
-
       <div className="relative">
         <div className="relative container m-auto px-6 md:px-12 lg:px-6">
           <div className="mb-12 pt-40 md:mb-20 md:pt-40 lg:w-9/12 lg:mx-auto">
             <h1
-              style={{ fontFamily: "Unbounded" }}
-              className="text-slate-300 text-center pb-5 text-5xl w-full font-bold sm:text-4xl md:text-5xl"
+              style={{
+                fontFamily: "Inter",
+                letterSpacing: "1px",
+                fontWeight: "900",
+                fontSize: "68px",
+              }}
+              className="text-slate-200 text-center pb-5 text-5xl w-full font-light sm:text-4xl md:text-5xl"
             >
               Label Your{" "}
-              <span className="inline bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-indigo-900 via-indigo-400 to-indigo-900 bg-clip-text font-display text-5xl tracking-tight text-transparent">
+              <span className="inline font-bold bg-gradient-to-tr from-orange-500 to-yellow-300 bg-clip-text font-display tracking-tight text-transparent">
                 Ideas
               </span>{" "}
-              with{" "}
-              <span className="inline bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-yellow-500 via-purple-500 to-blue-500 bg-clip-text font-display text-5xl tracking-tight text-transparent">
+              With{" "}
+              <span
+                style={{
+                  fontFamily: "Inter",
+                  letterSpacing: "1px",
+                  fontWeight: "900",
+                }}
+                className="inline bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-200 via-violet-600 to-sky-900 bg-clip-text font-display tracking-tight text-transparent "
+              >
                 Brandite
               </span>
             </h1>
+            <h2
+              style={{
+                fontFamily: "Inter",
+                letterSpacing: "1px",
+              }}
+              className="text-neutral-500 mx-auto max-w-screen-sm text-center"
+            >
+              Elevate your business with Brandite. Enter keywords and let our
+              innovative web app generate captivating brand names effortlessly.
+              Unlock your brand's potential today!
+            </h2>
+            <hr className="w-96 h-1 mx-auto opacity-20 bg-gray-100 border-0 rounded md:my-8 dark:bg-gray-700" />
 
             <ModalForm />
-            <div className="mt-10 pt-5">
-              <Swiper
-                effect={"coverflow"}
-                grabCursor={true}
-                centeredSlides={true}
-                slidesPerView={"auto"}
-                coverflowEffect={{
-                  rotate: 50,
-                  stretch: 0,
-                  depth: 100,
-                  modifier: 1,
-                  slideShadows: true,
-                }}
-                pagination={true}
-                modules={[EffectCoverflow, Pagination]}
-                className="mySwiper"
-              >
-                <SwiperSlide>
-                  <div className="relative rounded-2xl bg-[#0A101F]/80 ring-1 ring-white/10 backdrop-blur">
-                    <div className="absolute top-0 left-20 right-11 h-px bg-gradient-to-r from-sky-300/0 via-sky-300/70 to-sky-300/0" />
-                    <div className="absolute bottom-0 left-11 right-20 h-px bg-gradient-to-r from-blue-400/0 via-blue-400 to-blue-400/0" />
-                    <div className="">
-                      <img
-                        src="https://i.imgur.com/hwr0dHR.png"
-                        alt="Your image description"
-                        className="img-responsive rounded-2xl"
-                      />
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="relative rounded-2xl bg-[#0A101F]/80 ring-1 ring-white/10 backdrop-blur">
-                    <div className="absolute top-0 left-20 right-11 h-px bg-gradient-to-r from-sky-300/0 via-sky-300/70 to-sky-300/0" />
-                    <div className="absolute bottom-0 left-11 right-20 h-px bg-gradient-to-r from-blue-400/0 via-blue-400 to-blue-400/0" />
-                    <div className="">
-                      <img
-                        src="https://i.imgur.com/2B46KHA.png"
-                        alt="Your image description"
-                        className="img-responsive rounded-2xl"
-                      />
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="relative rounded-2xl bg-[#0A101F]/80 ring-1 ring-white/10 backdrop-blur">
-                    <div className="absolute top-0 left-20 right-11 h-px bg-gradient-to-r from-sky-300/0 via-sky-300/70 to-sky-300/0" />
-                    <div className="absolute bottom-0 left-11 right-20 h-px bg-gradient-to-r from-blue-400/0 via-blue-400 to-blue-400/0" />
-                    <div className="">
-                      <img
-                        src="https://i.imgur.com/oVUIZLf.png"
-                        alt="Your image description"
-                        className="img-responsive rounded-2xl"
-                      />
-                    </div>
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-            </div>
           </div>
         </div>
         {/* <div className="w-full p-4 mt-5 bg-slate-900">

@@ -1,0 +1,14 @@
+body {
+  /* background-color: white !important; */
+}
+
+.result-background {
+  background-image: radial-gradient(#18181829 5%, #ffffff1f 15%);
+  background-color: #fff;
+  background-position: 0 0, 14px 14px;
+  background-size: 16px 16px;
+  background-repeat: repeat;
+  position: fixed !important;
+  width: 100%;
+  min-height: 100vh;
+}
